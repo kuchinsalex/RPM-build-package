@@ -44,6 +44,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build package based on SPEC file
         run: |
-          cat .rpmmacros
+          cat $HOME/.rpmmacros
           cd /home/runner/work/RPM-build-package/RPM-build-package
           #rpmbuild -ba --sign rpmbuild/SPECS/nodejs-webserver.spec

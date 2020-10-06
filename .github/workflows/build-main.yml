@@ -22,7 +22,9 @@ jobs:
       - name: List files
         run: |
           pwd
-          ls -al
+          ls -al .
+          echo "========= listing of /home/runner/"
+          ls -al /home/runner/
       
       # Clone the repository
       - name: Check-out the repository

@@ -20,7 +20,9 @@ jobs:
     steps:
       # Checks-out the repository under $GITHUB_WORKSPACE, so that job can access it
       - name: List files
-        run: ls -al
+        run: |
+          pwd
+          ls -al
       
       # Clone the repository
       - name: Check-out the repository
@@ -34,5 +36,5 @@ jobs:
         run: echo Hello, world!
 
       # Runs a set of commands using the runners shell
-      - name: Build package based on SPEC file
-        run: rpmbuild -ba --sign rpmbuild/SPECS/nodejs-webserver.spec
+      #- name: Build package based on SPEC file
+      #  run: rpmbuild -ba --sign rpmbuild/SPECS/nodejs-webserver.spec
